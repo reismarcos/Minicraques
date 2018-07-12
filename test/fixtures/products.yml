@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  nationality_id: 1
+  team_id: 1
+  serie_id: 1
+  price: 1.5
+  code: 1
+  link: MyString
+  box: false
+  status: 1
+  line_id: 1
+  number: 1
+  picture: 
+  bio: MyText
+  factory_id: 1
+
+two:
+  name: MyString
+  nationality_id: 1
+  team_id: 1
+  serie_id: 1
+  price: 1.5
+  code: 1
+  link: MyString
+  box: false
+  status: 1
+  line_id: 1
+  number: 1
+  picture: 
+  bio: MyText
+  factory_id: 1

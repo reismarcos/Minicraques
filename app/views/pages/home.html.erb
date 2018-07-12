@@ -1,0 +1,59 @@
+<% content_for :title, "Minicraques" %>
+<div class="row">
+    <div class="col-md-3">
+        <div id="filter">
+            <h3>Filter</h3>
+            
+        </div>
+    </div>
+    <div class="col-md-9" id="container-tabela">
+        <table id="example" class="responsive minhatabela display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nome</th>
+                    <th class="displayoff"></th>
+                    <th class="displayoff">Time</th>
+                    <th class="displayoff"></th>
+                    <th class="displayoff">Nacionalidade</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <% @products.each do |product| %>
+                    <tr>
+                        <td><%= image_tag "boneco.jpg", :class => "img-boneco" %></td>
+                        <td><%= product.name %></td>
+                        <td class="displayoff"><%= image_tag "logo-cbf.png", :class => "img-logo" %></td>
+                        <td class="displayoff"><%= product.team_id %></td>
+                        <td class="displayoff"><%= image_tag "bandeira-brasil.png", :class => "img-bandeira" %></td>
+                        <td class="displayoff"><%= product.nationality_id %></td>
+                        
+                    </tr>
+                    <tr>
+                        <td><%= image_tag "boneco.jpg", :class => "img-boneco" %></td>
+                        <td><%= product.name %></td>
+                        <td class="displayoff"><%= image_tag "logo-cbf.png", :class => "img-logo" %></td>
+                        <td class="displayoff"><%= product.team_id %></td>
+                        <td class="displayoff"><%= image_tag "bandeira-brasil.png", :class => "img-bandeira" %></td>
+                        <td class="displayoff"><%= product.nationality_id %></td>
+                        
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>
+        
+<script>
+
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "bSort": false,
+        responsive: true,
+        
+    });
+} );
+
+
+</script>

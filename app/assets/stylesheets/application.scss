@@ -1,0 +1,446 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ /*
+*= require material_icons
+*= require dataTables/jquery.dataTables
+*/
+ 
+ 
+//---------------------HEADER---------------------------//
+@import "bootstrap";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background:#f7f7f7;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -200px;
+}
+
+.push {
+  height: 200px;
+}
+
+.hash-nav{
+    background:#206BA4 !important;
+    color:#fff !important;
+}
+
+.hash-nav a{
+    color:#fff !important;
+    text-decoration:none !important;
+    font-size:16px;
+}
+.navbar-brand{
+    color:#fff !important;
+    font-weight:bold;
+    font-size:20px !important;
+}
+.abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+    .btn-nav{
+        background-color: #206BA4; /* Green */
+        border: 2px solid #206BA4;
+        color: #fff !important;
+        padding: 8px 16px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border-radius: 10px;
+        margin-right: 20px;
+    
+    }
+    
+    .btn-nav:hover{
+        background-color: #2c73a9; /* Green */
+        color: #fff !important;
+        border: 2px solid #fff;
+    }
+}
+//-----------FIM-HEADER---------------------------//
+
+//-------------FOOTER----------------------------//
+
+footer{
+    min-height:200px;
+    background:#191919;
+    width:100%;
+    position:relative;
+    bottom:0px;
+    color:#fff;
+    padding-top:10px;
+}
+
+.row{
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+.pos-icon{
+    float:left;
+    width:50%;
+    text-align:center;
+}
+.icon-footer{
+    width:110px;
+    height:110px;
+    padding:20px;
+    -webkit-filter: grayscale(100%); /* Safari */
+    filter: grayscale(100%);
+    transition: .5s;
+    border-radius: 10px;
+}
+.social-media{
+    text-align:center;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5px;
+    
+}
+.box-icon{
+    text-align:center;
+}
+
+.icon-footer:hover{
+    -webkit-filter: grayscale(0%); /* Safari */
+    filter: grayscale(0%);
+    background:#ffffff2e;
+}
+footer h2{
+    text-align:center;
+}
+.prostars-logo{
+    padding-top:20px;
+    text-align:center;
+    -webkit-filter: grayscale(100%); /* Safari */
+    filter: grayscale(100%);
+    transition: .5s;
+}
+.prostars-logo:hover{
+    -webkit-filter: grayscale(0%); /* Safari */
+    filter: grayscale(0%);
+}
+.alinhar-centro{
+    text-align:center;
+}
+
+.infos-contact{
+    text-align:left;
+    padding-left:20%;
+    padding-top:20px;
+}
+.prod{
+    width:100%;
+    min-height:60px;
+    background:#081b29;
+    text-align:center;
+    padding:5px;
+}
+
+.icon-hash{
+    width:40px;
+    height:40px;
+}
+
+footer hr{
+    width:100%;
+    background:#FFAB35;
+    position:relative;
+    bottom:-15px;
+}
+
+//-------------FIM-FOOTER----------------------------//
+
+
+//-------------LOGIN----------------------------//
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+#login {
+  background: url("campnou-bg.jpg");
+  background-size:cover;
+  font-family: 'Open Sans', sans-serif;
+  padding:5%;
+}
+
+.login {
+  max-width: 400px;
+  margin: 0px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #FFAB35;
+}
+
+.login-header {
+  background: #FFAB35;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"],
+.gray-border {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus,
+.gray-border:focus{
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #206BA4;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+//-------------HOME----------------------------//
+
+#container-tabela{
+  padding:20px !important;
+  background:#fff;
+  font-family: 'Open Sans', sans-serif !important; 
+}
+
+.minhatabela{
+  max-width:100%;
+  background:#fff !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.img-boneco{
+  height:120px;
+  width:100px;
+  margin:0px;
+  padding:0px;
+}
+.img-logo{
+  height:40px;
+  width:40px;
+  background:#fff;
+}
+.img-bandeira{
+  height:35px;
+  width:40px;
+}
+.minhatabela td tr{
+}
+
+.minhatabela td{
+  font-family: 'Lato';  
+  font-size: 16px;
+  color: #808080;
+  line-height: 1.4 !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.minhatabela td th{
+  padding:0px !important;
+  text-align:center !important;
+  background:#fff;
+}
+
+table.dataTable tbody th, table.dataTable tbody td{
+  padding:0px !important;
+  text-align:center !important;
+}
+
+.minhatabela th{
+    font-family: 'Lato';
+    font-weight:bold;
+    font-size: 18px;
+    color: #4272d7;
+    line-height: 1.4;
+    background-color: transparent;
+    border-bottom: 2px solid #f2f2f2 !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+    text-align:center;
+}
+
+.minhatabela tr{
+  border-bottom: 1px solid #f2f2f2 !important; 
+}
+
+table.dataTable.display tbody tr:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1 , table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd , table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 , table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd{
+  background:#fff !important;
+}
+
+table.dataTable td:hover, .minhatabela tr:hover {
+  background:#fff !important;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  font-family: 'Lato';  
+  color: #808080;
+}
+
+table.dataTable.no-footer{
+    border-bottom: 1px solid #f2f2f2 !important; 
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+  background:#4272d7 !important;
+  color:#fff !important;
+  height:30px !important;
+  text-align:center !important;
+  font-family: 'Lato' !important;
+  border:0px !important;
+  font-size:12px !important;
+}
+
+[type="search"] {
+  -webkit-appearance: searchfield;
+   -moz-appearance:    searchfield;
+   appearance:         searchfield;
+  border: 1px solid #4272d761 !important;
+}
+
+select {
+  border: 1px solid #b7c9f0 !important;
+  font-family: 'Lato';
+
+}
+
+
+//---------------------FILTER HOME----------------------------------//
+
+#filter{
+  font-family: 'Lato';
+  padding-top:20px;
+  padding-bottom:20px;
+  text-align:center;
+  border: 1px solid #f2f2f2 !important;
+  height:100%;
+  background:#fff;
+}
+
+#filter h3{
+  font-size:18px;
+  color:#4272d7;
+}
+
+//--------------PAGE ABOUT-----------------//
+
+#about{
+  padding:35px;
+  width:100%;
+  min-height:400px;
+  height:100%;
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+  background:#fff;
+}
+
+#about h1{
+  color:#4272d7;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom:10px;
+  font-size:48px;
+}
+
+#about .txt{
+  padding-left:10%;
+  padding-right:10%;
+  text-align:left;
+  padding-top:25px;
+  font-family: 'Roboto', sans-serif;
+  color:#444343;
+  font-size:18px;
+}
+
+#about hr {
+  border-width: 0 0 1px;
+  $color:#54A4DE ;
+  color: $color;
+  border-image: linear-gradient(
+    90deg,
+    rgba($color, 0),
+    rgba($color, 1) 50%,
+    rgba($color, 0) 100%) 0 0 100%;
+  border-style: solid;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,table.dataTable.dtr-inline.collapsed>tbody>tr>th.child,table.dataTable.dtr-inline.collapsed>tbody>tr>td.dataTables_empty{cursor:default !important}table.dataTable.dtr-inline.collapsed>tbody>tr>td.child:before,table.dataTable.dtr-inline.collapsed>tbody>tr>th.child:before,table.dataTable.dtr-inline.collapsed>tbody>tr>td.dataTables_empty:before{display:none !important}table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child,table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child{position:relative;padding-left:30px;cursor:pointer}table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{top:9px;left:4px;height:14px;width:14px;display:block;position:absolute;color:white;border:2px solid white;border-radius:14px;box-shadow:0 0 3px #444;box-sizing:content-box;text-align:center;text-indent:0 !important;font-family:'Courier New', Courier, monospace;line-height:14px;content:'+';background-color:#31b131}table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before{content:'-';background-color:#d33333}table.dataTable.dtr-inline.collapsed.compact>tbody>tr>td:first-child,table.dataTable.dtr-inline.collapsed.compact>tbody>tr>th:first-child{padding-left:27px}table.dataTable.dtr-inline.collapsed.compact>tbody>tr>td:first-child:before,table.dataTable.dtr-inline.collapsed.compact>tbody>tr>th:first-child:before{top:5px;left:4px;height:14px;width:14px;border-radius:14px;line-height:14px;text-indent:3px}table.dataTable.dtr-column>tbody>tr>td.control,table.dataTable.dtr-column>tbody>tr>th.control{position:relative;cursor:pointer}table.dataTable.dtr-column>tbody>tr>td.control:before,table.dataTable.dtr-column>tbody>tr>th.control:before{top:50%;left:50%;height:16px;width:16px;margin-top:-10px;margin-left:-10px;display:block;position:absolute;color:white;border:2px solid white;border-radius:14px;box-shadow:0 0 3px #444;box-sizing:content-box;text-align:center;text-indent:0 !important;font-family:'Courier New', Courier, monospace;line-height:14px;content:'+';background-color:#31b131}table.dataTable.dtr-column>tbody>tr.parent td.control:before,table.dataTable.dtr-column>tbody>tr.parent th.control:before{content:'-';background-color:#d33333}table.dataTable>tbody>tr.child{padding:0.5em 1em}table.dataTable>tbody>tr.child:hover{background:transparent !important}table.dataTable>tbody>tr.child ul.dtr-details{display:inline-block;list-style-type:none;margin:0;padding:0}table.dataTable>tbody>tr.child ul.dtr-details>li{border-bottom:1px solid #efefef;padding:0.5em 0}table.dataTable>tbody>tr.child ul.dtr-details>li:first-child{padding-top:0}table.dataTable>tbody>tr.child ul.dtr-details>li:last-child{border-bottom:none}table.dataTable>tbody>tr.child span.dtr-title{display:inline-block;min-width:75px;font-weight:bold}div.dtr-modal{position:fixed;box-sizing:border-box;top:0;left:0;height:100%;width:100%;z-index:100;padding:10em 1em}div.dtr-modal div.dtr-modal-display{position:absolute;top:0;left:0;bottom:0;right:0;width:50%;height:50%;overflow:auto;margin:auto;z-index:102;overflow:auto;background-color:#f5f5f7;border:1px solid black;border-radius:0.5em;box-shadow:0 12px 30px rgba(0,0,0,0.6)}div.dtr-modal div.dtr-modal-content{position:relative;padding:1em}div.dtr-modal div.dtr-modal-close{position:absolute;top:6px;right:6px;width:22px;height:22px;border:1px solid #eaeaea;background-color:#f9f9f9;text-align:center;border-radius:3px;cursor:pointer;z-index:12}div.dtr-modal div.dtr-modal-close:hover{background-color:#eaeaea}div.dtr-modal div.dtr-modal-background{position:fixed;top:0;left:0;right:0;bottom:0;z-index:101;background:rgba(0,0,0,0.6)}@media screen and (max-width: 767px){div.dtr-modal div.dtr-modal-display{width:95%}}
+
+@media screen and (max-width: 600px) {
+  .displayoff{
+    display:none;
+  }
+}

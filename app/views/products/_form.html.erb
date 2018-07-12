@@ -1,0 +1,87 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :product_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality_id %>
+    <%= form.number_field :nationality_id, id: :product_nationality_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.number_field :team_id, id: :product_team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serie_id %>
+    <%= form.number_field :serie_id, id: :product_serie_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :product_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.number_field :code, id: :product_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link, id: :product_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :box %>
+    <%= form.check_box :box, id: :product_box %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status, id: :product_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :line_id %>
+    <%= form.number_field :line_id, id: :product_line_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.number_field :number, id: :product_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture, id: :product_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, id: :product_bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :factory_id %>
+    <%= form.number_field :factory_id, id: :product_factory_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

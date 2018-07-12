@@ -1,0 +1,22 @@
+<% content_for :title, "Login – Minicraques" %>
+
+<section id="login">
+    <div class="row">
+        <div class="col-md-12">
+    <div class="login">
+        <div class="login-triangle"></div>
+        <h2 class="login-header">Login</h2>
+        
+<%= form_for(:session, url: login_path, :html => {:class => "login-container"}) do |f| %>
+
+    <p><%= f.text_field :login, :placeholder =>"Email", :class => "gray-border" %></p>
+    
+    <p><%= f.password_field :password , :placeholder =>"Password", :type => "password" %></p>
+    
+    <p><%= f.submit "Login" %><p>
+<% end %>
+    </div>
+    </div>
+    </div>
+</section>
+
